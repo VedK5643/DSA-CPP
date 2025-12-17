@@ -27,6 +27,6 @@ g++ filename.cpp -o filename
 
 📬 Contact:
 Email: vedagyagupta@gmail.com
-GitHub: VedK5643
+GitHub: https://github.com/VedK5643
 
 “Practice makes perfect. Keep coding and learning!” 🚀
