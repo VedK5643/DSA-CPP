@@ -29,10 +29,21 @@ int sum(int n){
     }
 }
 
+int fibonacci(int n){
+    if(n==1||n==0){
+        return n;
+    }
+    else{
+        return fibonacci(n-1)+fibonacci(n-2);
+    }
+}
+
+
+
 
 int main(){
     printnums(10);
     cout<<factorial(5)<<endl;
-    cout<<sum(10);
+    cout<<fibonacci(4);
     return 0;
 }
