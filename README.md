@@ -29,4 +29,4 @@ g++ filename.cpp -o filename
 Email: vedagyagupta@gmail.com
 GitHub: https://github.com/VedK5643
 
-“Practice makes perfect. Keep coding and learning!” 🚀
+“Practice makes perfect. Keep coding and learning!” 
