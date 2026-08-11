@@ -27,12 +27,21 @@ Node* buildtree(vector<int> preorder){
     return root;
 }
 
+void pretraversal(Node* root){
+    if(root==NULL){
+        return;
+    }
+
+    cout<<root->data<<" ";
+    pretraversal(root->left);
+    pretraversal(root->right);
+}
 
 
 int main(){
     vector<int> preorder={1,2,-1,-1,3,4,-1,-1,5,-1,-1};
     Node* root=buildtree(preorder);
-    cout<<root->data<<"\n";
+    pretraversal(root);
     
     return 0;
 }
