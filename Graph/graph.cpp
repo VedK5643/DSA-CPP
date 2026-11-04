@@ -1,6 +1,7 @@
 #include<iostream>
 #include<list>
 #include<vector>
+#include<queue>
 using namespace std;
 
 class Graph{
@@ -27,7 +28,32 @@ class Graph{
             cout<<endl;
         }
     }
+
+    void bfs(){             // O(V+E)
+        queue<int> q;
+        vector<bool> visited(V, false);
+        
+        q.push(0);
+        visited[0]=true;
+
+        while(q.size()>0){
+            int u=q.front();
+            q.pop();
+            cout<<u<<"\t";
+
+            for(int v : l[u]){
+                if(!visited[v]){
+                    visited[v]=true;
+                    q.push(v);
+                }
+            }
+        }
+        cout<<endl;
+    }
+
 };
+
+
 
 
 int main(){
@@ -40,6 +66,7 @@ int main(){
     g.addedge(2,4);
 
     g.printadjlist();
+    g.bfs();
     
 
     return 0;
