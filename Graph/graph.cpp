@@ -51,6 +51,24 @@ class Graph{
         cout<<endl;
     }
 
+    void dfshelper(int u , vector<bool> &visited){
+        cout<<u <<" \t";
+        visited[u]=true;
+
+        for(int v : l[u]){
+            if(!visited[v]){
+                dfshelper(v,visited);
+            }
+        }
+    }
+
+    void dfs(){
+        int src=0;
+        vector<bool> visited(V,false);
+
+        dfshelper(src,visited);
+    }
+
 };
 
 
@@ -62,11 +80,13 @@ int main(){
     g.addedge(0,1);
     g.addedge(1,2);
     g.addedge(1,3);
-    g.addedge(2,3);
     g.addedge(2,4);
 
     g.printadjlist();
+    cout<<endl;
     g.bfs();
+    cout<<endl;
+    g.dfs();
     
 
     return 0;
